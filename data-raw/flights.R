@@ -3,7 +3,7 @@ library(readr)
 
 flight_url <- function(year = 2013, month) {
   base_url <- "http://www.transtats.bts.gov/Download/"
-  sprintf(paste0(base_url, "On_Time_On_Time_Performance_%d_%d.zip"), year, month)
+  sprintf("%sOn_Time_On_Time_Performance_%d_%d.zip"), base_url, year, month)
 }
 
 download_month <- function(year = 2013, month) {
